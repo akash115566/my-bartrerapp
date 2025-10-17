@@ -1,0 +1,456 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background-color: black;
+  overflow-x: hidden;
+
+}
+
+.ipl-page {
+  background: black;
+}
+
+/* Banner */
+.ipl-banner {
+  display: flex;
+  align-items: center;        /* content vertical middle me */
+  justify-content: space-between;
+  padding: 20px 8%;           /* kam padding rakhi */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 220px;  
+   margin-top: 30px;
+}
+
+.banner-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.banner-left h1 {
+   font-size: 2rem;            /* text bhi thoda chhota */
+  margin-bottom: 15px;
+  color: #ffcc00; /* IPL yellow highlight */
+}
+
+.banner-left p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.banner-left button {
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-left button:hover {
+  background: #ffaa00;
+}
+
+.banner-right {
+  flex: 1;
+}
+
+.banner-right video {
+  width: 100%;
+  border-radius: 10px;
+  mix-blend-mode: multiply;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+}
+
+
+
+.barter-ipl-div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header1 h2 {
+  margin-top: 30px;
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.header1 h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.left-image{
+  margin-right: 90px;
+}
+
+.left-image img {
+  width: 100%;
+  max-width: 500px;
+
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.right-text {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.right-text h3 {
+  margin-top: 20px;
+  color: white;
+}
+.right-text p,ul li{
+  color: white;
+}
+.dark{
+  color: red;
+}
+.dark1{
+  color: white;
+  text-align: justify;
+}
+
+.right-text ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.right-text li {
+  margin-bottom: 10px;
+}
+
+/* Desktop view */
+@media screen and (min-width: 900px) {
+  .content-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .left-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-text {
+    flex: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Horizontal Images */
+.ipl-section {
+  margin: 50px 0;
+}
+
+.ipl-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: orange;
+}
+
+.ipl-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.ipl-card img {
+  width: 500px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+/* Text Sections */
+/* Container Grid */
+.ipl-texts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* दो कॉलम desktop/laptop पर */
+  gap: 30px;
+  margin: 40px 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Individual Card */
+.ipl-text-box {
+  background: rgb(37, 36, 36);
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(237, 187, 23, 0.772);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Card Heading */
+.ipl-text-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+/* Card Paragraph */
+.ipl-text-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Hover Effect */
+.ipl-text-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.ipl-section-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+
+/* ------------------ Responsive ------------------ */
+
+/* Large Tablet / Small Laptop */
+@media(max-width: 1024px) {
+  .ipl-texts {
+    grid-template-columns: repeat(2, 1fr); /* laptop पर 2 कॉलम */
+    gap: 20px;
+    margin: 30px 15px;
+  }
+
+  .ipl-text-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .ipl-text-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet / Mobile Landscape */
+@media(max-width: 768px) {
+  .ipl-texts {
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 20px;
+    margin: 25px 10px;
+  }
+
+  .ipl-text-box {
+    padding: 20px 15px;
+  }
+
+  .ipl-text-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .ipl-text-box p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile */
+@media(max-width: 480px) {
+  .ipl-texts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px 10px;
+  }
+
+  .ipl-text-box {
+    padding: 15px 10px;
+  }
+
+  .ipl-text-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .ipl-text-box p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+.ipl-page1 {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: black;
+  text-align: center;
+}
+
+h2 {
+  color: #ff4500;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+/* Live Score */
+.live-score-section {
+  background: #000;
+  color: #fff;
+  padding: 0px;
+  border-radius: 10px;
+}
+.live-score-section h2{
+  color: orange;
+  font-size: 35px;
+
+ 
+}
+
+.barter-services-section h2{
+  color: orange;
+  margin-top: 30px;
+  font-size: 35px;
+}
+/* Services */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: red; */
+  gap: 60px;
+}
+.service-card2 {
+    background: rgb(51, 51, 51);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.service-card2 h3{
+  color: orange;
+}
+.service-card2 p{
+  color: white;
+}
+
+/* Players */
+.player-highlights-section h2{
+  color: orange;
+  margin-top: 30px;
+  font-size: 35px;
+}
+.player-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+.player-card {
+  background: rgb(51, 51, 51);
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+}
+.player-card h3{
+  color: orange;
+  font-size: 23px;
+}
+.player-card p{
+  color: white;
+}
+
+/* Media Partners */
+.media-partners-section  h2{
+color: orange;
+font-size: 35px;
+margin-top: 30px;
+}
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.partners-logos img {
+  width: 120px;
+  height: auto;
+}
+
+/* Videos */
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: #fff;
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta-btn {
+  margin: 10px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #ff4500;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #e63e00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-cards, .player-cards, .video-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partners-logos {
+    flex-direction: column;
+  }
+}
+

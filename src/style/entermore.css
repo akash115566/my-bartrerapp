@@ -1,0 +1,271 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+.entermore-page {
+  width: 100%;
+  background: #121212;
+  color: #fff;
+  padding: 20px 0;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Banner */
+/* ====== Entermore Banner Section ====== */
+.entermore-banner {
+  display: flex;
+  flex-wrap: wrap;                  /* allow stacking on small screens */
+  align-items: center;              /* vertical center */
+  justify-content: space-between;   /* space between text & video */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 30px 0 50px;
+  box-sizing: border-box;
+}
+
+/* Banner Text */
+.banner-text {
+  flex: 1 1 300px;                  /* shrinkable, min width 300px */
+  min-width: 280px;
+  text-align: left;
+}
+
+/* Text Headline */
+.banner-text h1 {
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+/* Video Container */
+.banner-video1 {
+  flex: 1 1 250px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;          /* horizontal center */
+  align-items: center;              /* vertical center */
+  margin-top: 15px;                 /* spacing on small screens */
+}
+
+/* Video */
+.banner-video1 video {
+  width: 100%;                       /* scale with parent */
+  max-width: 400px;                  /* optional max width */
+  height: auto;                      /* maintain aspect ratio */
+  border-radius: 12px;
+  object-fit: contain;               /* prevent cutting */
+  display: block;
+}
+
+/* ====== Responsive ====== */
+
+/* Large Desktop / Laptop (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .entermore-banner {
+    flex-direction: row;
+    padding: 40px 30px;
+  }
+
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-video1 video {
+    max-height: 270px;
+  }
+}
+
+/* Tablets (600px - 1023px) */
+@media (max-width: 1023px) {
+  .entermore-banner {
+    flex-direction: column;         /* stack text & video */
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .banner-video1 video {
+    max-height: 220px;
+  }
+}
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .banner-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 0.95rem;
+  }
+
+  .banner-video1 video {
+    max-height: 180px;
+    width: 90%;                     /* leave some margin */
+  }
+}
+
+/* Very Small Devices (up to 480px) */
+@media (max-width: 480px) {
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+
+  .banner-video1 video {
+    width: 95%;
+    max-height: 160px;
+  }
+}
+
+
+
+/* Channels Container */
+.channels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  /* background-color: red; */
+}
+
+/* Channel Card */
+.channel-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;           /* allow stacking on small screens */
+  background: #1a1a1a;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Left Content */
+.channel-left {
+  flex: 1 1 300px;
+  min-width: 280px;
+  text-align: left;
+}
+
+.channel-left h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.channel-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Right Image */
+.channel-right {
+  flex: 1 1 300px;       /* wider responsive width */
+  min-width: 300px;      /* minimum width for smaller screens */
+  max-width: 300px;      /* maximum width for larger screens */
+  height: 250px;         /* adjust height accordingly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;      /* prevents overflow */
+}
+
+.channel-right img {
+  width: 100%;           /* fill container width */
+  height: 100%;          /* fill container height */
+  object-fit: cover;     /* keep aspect ratio, crop excess */
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* Tablet: 992px */
+@media (max-width: 992px) {
+  .channel-card {
+    flex-direction: column;     /* stack content */
+    text-align: center;         /* center text */
+    padding: 25px 15px;
+  }
+  .channel-left h2 {
+    font-size: 1.8rem;
+  }
+  .channel-left p {
+    font-size: 1rem;
+  }
+  .channel-right img {
+    width: 60%;
+    max-height: 180px;
+  }
+}
+
+/* Mobile: 768px */
+@media (max-width: 768px) {
+  .channel-left h2 {
+    font-size: 1.5rem;
+  }
+  .channel-left p {
+    font-size: 0.95rem;
+  }
+  .channel-right img {
+    width: 50%;
+    max-height: 150px;
+  }
+}
+
+/* Small Mobile: 480px */
+@media (max-width: 480px) {
+  
+  .channel-card{
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+  }
+  .channel-left h2 {
+    font-size: 1.3rem;
+  }
+  .channel-left p {
+    font-size: 0.9rem;
+  }
+  .channel-right img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+  }
+}
+

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+.ottmore-page {
+  background: #121212;
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Banner */
+.ott-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, orange, rgb(240, 180, 50));
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.banner-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.banner-video {
+  flex: 1;
+  min-width: 300px;
+}
+
+.banner-video video {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+/* Main Section */
+.ott-main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ott-heading {
+  font-size: 2rem;
+  color: orange;
+  border-left: 5px solid orange;
+  display: inline-block;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.ott-link {
+  margin: 20px 0;
+}
+
+.ott-link a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid orange;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.ott-link a:hover {
+  background: orange;
+  color: #121212;
+  transform: scale(1.05);
+}
+
+/* Gallery */
+.ott-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.ott-card {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ott-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ott-card:hover img {
+  transform: scale(1.1);
+}
+
+.ott-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: top 0.4s ease;
+  text-align: center;
+}
+
+.ott-card:hover .ott-overlay {
+  top: 0;
+}
+
+.ott-overlay h3 {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ott-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ott-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}

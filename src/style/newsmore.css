@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+.newsmore-page {
+  width: 100%;
+  background: #121212;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+/* Banner */
+.news-banner1 {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  border-radius: 12px;
+  flex-wrap: wrap;
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.banner-text1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.banner-text1 h1 {
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.banner-text1 p {
+  font-size: 1.2rem;
+}
+
+.banner-video1 {
+  flex: 1;
+  min-width: 250px;
+  /* margin-top: 30px; */
+  /* background-color: rgb(23, 22, 22); */
+}
+
+.banner-video1 video {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 30px;
+  height: 250px; /* adjust height */
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+/* News Section */
+.news-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.news-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.news-left h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.news-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.news-right {
+  flex: 1;
+  min-width: 200px;
+  min-width: 200px;
+  height: 150px;
+}
+
+.news-right img {
+  width: 60%; /* default 100% tha, ab 70% kar diya */
+  height: 100%;
+  border-radius: 12px;
+  object-fit: fill;
+  display: block;
+  margin: 0 auto; /* center karna ho to */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .news-banner, .news-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-text h1, .news-left h2 {
+    font-size: 2rem;
+  }
+  .banner-video video {
+    height: 250px;
+  }
+  .news-right img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-text h1, .news-left h2 {
+    font-size: 1.8rem;
+  }
+  .banner-video video {
+    height: 200px;
+  }
+  .news-right img {
+    height: 120px;
+  }
+}

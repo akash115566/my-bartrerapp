@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+.ott-page {
+  background: black;
+  min-height: 100vh;
+}
+
+/* Banner */
+/* .ott-banner {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+} */
+.ott-banner {
+  display: flex;
+  align-items: center;        /* content vertical middle me */
+  justify-content: space-between;
+  padding: 20px 8%;           /* kam padding rakhi */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 220px;          /* pehle 400px tha, ab kam */
+   margin-top: 30px;
+}
+
+.banner-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.banner-left h1 {
+  font-size: 2rem;            /* text bhi thoda chhota */
+  margin-bottom: 15px;
+}
+
+.banner-left p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.banner-left button {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.banner-left button:hover {
+  background: #ff6600;
+}
+
+.banner-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+}
+
+.banner-right video {
+  width: 100%;
+  max-width: 400px;          /* thoda chhota video */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .banner-left, .banner-right {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .banner-left h1 {
+    font-size: 2rem;
+  }
+
+  .banner-right video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Horizontal Image Row */
+.ott-section1 {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1400px; /* center and limit width */
+}
+
+.ott-heading1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ff6600;
+}
+
+.ott-images1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* auto responsive grid */
+  gap: 25px;
+  justify-items: center;
+}
+
+.ott-card1 {
+  width: 100%;
+  max-width: 250px;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgb(51, 51, 51);
+}
+
+.ott-card1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.ott-card1 img {
+  padding: 6px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .ott-heading {
+    font-size: 1.8rem;
+  }
+  .ott-card img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ott-heading {
+    font-size: 1.6rem;
+  }
+  .ott-card img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ott-heading {
+    font-size: 1.4rem;
+  }
+  .ott-card img {
+    height: 120px;
+  }
+}
+
+
+.ott-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin: 10px auto;
+  max-width: 1310px;
+  padding: 0px;
+  background-color: black;
+}
+
+.ott-box {
+  width: 100%;
+  /* background: linear-gradient(135deg, #ffffff, #f9f9f9); */
+   background-color: rgb(17, 16, 16);
+  border-radius: 18px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(233, 178, 29, 0.978);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.ott-box::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  /* background: linear-gradient(45deg, #ff4b2b, #ff416c, #ff7e5f, #feb47b); */
+  transition: 0.5s;
+  z-index: 0;
+  opacity: 0;
+}
+
+.ott-box:hover::before {
+  top: 0;
+  left: 0;
+  opacity: 0.15;
+}
+
+.ott-box h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: orange;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.ott-box p {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+/* Hover Effects */
+.ott-box:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.ott-box:hover h3 {
+  color: #ff4b2b;
+}
+
+.ott-box:hover p {
+  color: white;
+}
+

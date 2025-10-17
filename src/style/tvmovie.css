@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+.tv-movie-page {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Top Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ background: linear-gradient(90deg, #ff8c00, #ffd700);
+  color: white;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.banner-left {
+  flex: 1;
+}
+
+.banner-left h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.banner-left p {
+  font-size: 18px;
+}
+
+.banner-right {
+  flex: 1;
+}
+
+.banner-right video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Channels Section */
+.channels {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.channel {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.channel-left {
+  flex: 1;
+}
+
+.channel-left h2 {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+.channel-left img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.channel-right {
+  flex: 2;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.channel-right p{
+    text-align: justify;
+    font-weight: 500;
+}

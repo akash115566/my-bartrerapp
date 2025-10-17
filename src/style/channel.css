@@ -1,0 +1,759 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+/* Banner Styling */
+.channel-banner {
+  display: flex;
+  align-items: center;        /* content vertical middle me */
+  justify-content: space-between;
+  padding: 20px 8%;           /* kam padding rakhi */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 220px;  
+   margin-top: 30px;
+}
+
+.banner-left {
+  flex: 1;
+  padding-right: 15px;
+   min-width: 280px;
+}
+
+.banner-left h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.banner-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.banner-left button {
+  padding: 12px 25px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.banner-left button:hover {
+  background: #ff6600;
+}
+
+.banner-right {
+  /* flex: 1; */
+  text-align: center;
+}
+
+.banner-right video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 16px rgba(35, 10, 219, 0.936);
+}
+
+/* Section Styling */
+.channel-section {
+  margin: 60px auto;
+  width: 97%;
+  /* background-color: yellow; */
+}
+
+.channel-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: orange;
+  text-align: left;
+  border-left: 5px solid orange;
+  padding-left: 10px;
+}
+
+.auto-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 8); /* total images including duplicate */
+  animation: scroll 20s linear infinite;
+}
+
+.auto-slider:hover .slide-track {
+  animation-play-state: paused; /* hover pe ruk jayega */
+}
+.slide {
+  width: 350px;
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 150px;
+  object-fit: fill;
+  border-radius: 12px;
+  /* border: 2px solid gray; */
+    box-shadow: 0px 6px 16px rgba(105, 104, 108, 0.936);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* duplicate images ka half width */
+  }
+}
+
+.tv1{
+  height: 130px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(51,51,51);
+  /* margin-left: 20px; */
+  padding-left: 20px;
+  gap: 20px;
+}
+.tv1 h1{
+  color: orange;
+  font-size: 35px;
+  padding-left: 15px;
+  border-left: 5px solid orange;
+}
+.tv1 h4{
+  color: white;
+  border-radius: 12px;
+padding: 8px 20px;
+  background: orange;
+  height: 40px;
+  width: 200px;
+}
+.tv1 h4:hover {
+  background: orange;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* animation for heading */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: rgb(51,51,51);
+  overflow: hidden;
+}
+
+
+.slider2 {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: rotate 20s infinite linear;  /* rotation ON */
+}
+
+.slider2 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  background-color: rgb(199, 194, 194);
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.slider2 span img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* हर image को अलग angle पर set करना */
+.slider2 span:nth-child(1) {
+  transform: rotateY(0deg) translateZ(400px);
+}
+.slider2 span:nth-child(2) {
+  transform: rotateY(60deg) translateZ(400px);
+}
+.slider2 span:nth-child(3) {
+  transform: rotateY(120deg) translateZ(400px);
+}
+.slider2 span:nth-child(4) {
+  transform: rotateY(180deg) translateZ(400px);
+}
+.slider2 span:nth-child(5) {
+  transform: rotateY(240deg) translateZ(400px);
+}
+.slider2 span:nth-child(6) {
+  transform: rotateY(300deg) translateZ(400px);
+}
+
+/* Animation for auto rotation */
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.busi1{
+ padding: 20px;
+}
+.busi1 h2{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: orange;
+  text-align: left;
+  border-left: 5px solid orange;
+  padding-left: 10px;
+}
+
+.business-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* padding: 40px; */
+  /* border: 2px solid rgb(41, 40, 40); */
+  background-color: black;
+}
+
+.business-card {
+  flex: 1;
+  background-color: #ffffffe9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.business-card:hover {
+  transform: translateY(-5px);
+}
+
+.business-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.business-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #bfa44a; /* matching goldish color from image */
+}
+
+.business-card p {
+  font-size: 14px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* regional new  */
+
+/* ====== Regional News Section ====== */
+.regional-news {
+    padding: 20px;
+}
+
+/* Heading */
+.regional-news h2 {
+    position: relative;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: orange;
+    padding-left: 15px; /* space between border and text */
+}
+
+.regional-news h2::before {
+    content: "";
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 5px; 
+    height: 100%;
+    background-color: orange; 
+}
+
+/* News Cards Grid */
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;            /* wrap cards to new line */
+    justify-content: center;    /* center cards horizontally */
+    gap: 15px;                  /* space between cards */
+}
+
+/* Individual News Card */
+.news-card {
+    flex: 0 1 18%;              /* shrinkable, basis 18% for 5 cards row */
+    max-width: 100%;            /* prevent overflow */
+    min-width: 245px;
+    width: 350px;
+    background: #ffffffd5;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;           /* better scaling */
+}
+
+.news-card h4 {
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(210, 150, 40);
+}
+
+.news-card p {
+    text-align: justify;
+    padding: 10px;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Desktop large screens (≥1025px) */
+@media (min-width: 1025px) {
+    .news-card {
+        flex: 0 1 18%; /* 5 cards per row */
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .news-card {
+        flex: 0 1 30%; /* 3 cards per row */
+    }
+}
+
+/* Small tablets / large mobiles (480px - 767px) */
+@media (max-width: 767px) {
+    .news-card {
+        flex: 0 1 45%; /* 2 cards per row */
+    }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .news-card {
+        flex: 0 1 90%; /* 1 card per row */
+    }
+}
+
+/* zee new style */
+/* ====== Top News Section 3 ====== */
+.top-news-section3 {
+  padding: 20px;
+  background-color: black;
+}
+
+/* Heading */
+.top-news-section3 h2 {
+  text-align: left;
+  font-size: 32px;
+  color: #ff6600;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.top-news-section3 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #ff6600;
+}
+
+/* News Cards Grid */
+.news-cards-container3 {
+  display: flex;
+  flex-wrap: wrap;             /* wrap cards to next line */
+  justify-content: center;     /* center cards horizontally */
+  gap: 20px;                   /* space between cards */
+}
+
+/* Individual News Card */
+.news-card3 {
+  flex: 0 1 18%;               /* shrinkable, basis 18% for 5 cards row */
+  max-width: 100%;             /* never overflow container */
+  background: #ffffffd5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Image */
+.news-card3 img {
+    width: 100%;
+    height: auto;       /* allow height to scale */
+    max-height: 180px;  /* optional max height */
+    object-fit: contain; /* keeps full image visible */
+}
+
+
+/* Text */
+.news-text3 {
+  padding: 12px;
+  text-align: left;
+}
+
+.news-text3 h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: orange;
+}
+
+.news-text3 p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Desktop large screens (≥1025px) */
+@media (min-width: 1025px) {
+  .news-card3 {
+    flex: 0 1 18%; /* 5 cards per row */
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .news-card3 {
+    flex: 0 1 30%; /* 3 cards per row */
+  }
+}
+
+/* Small tablets / large mobiles (480px - 767px) */
+@media (max-width: 767px) {
+  .news-card3 {
+    flex: 0 1 45%; /* 2 cards per row */
+  }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .news-card3 {
+    flex: 0 1 90%; /* 1 card per row */
+  }
+}
+
+/* Reset */
+
+
+/* Hero Section */
+/* ====== Hero Section ====== */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;               /* allow stacking on small screens */
+  align-items: center;           /* vertical alignment */
+  justify-content: space-between; /* space between content & image */
+  margin-top: 30px;
+  padding: 30px 20px;
+  background: linear-gradient(90deg, #41403e, #b7b5af);
+  color: #fff;
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Headline & Paragraph */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.cta-btn {
+  background-color: #fff;
+  color: #ff7e5f;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff6f4d;
+  color: #fff;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 350px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;                 /* allow image to scale */
+  border-radius: 15px;
+  mix-blend-mode: multiply;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;       /* stack content & image */
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    height: auto;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+
+  .hero-image img {
+    width: 90%;  /* leave some space on sides */
+    height: auto;
+  }
+}
+
+
+/* Info Section */
+.info-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.info-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: orange;
+}
+.info-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.info-section img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Channel Cards */
+.channel-cards-section2 {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+}
+.channel-cards-section2 h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: orange;
+}
+.channel-cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.channel-card2 {
+  background-color: #726c6c;
+  border-radius: 15px;
+  width: 350px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+.channel-card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.channel-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.channel-image2 {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.channel-card2 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.category {
+  font-size: 0.95rem;
+  color: white;
+}
+.reach {
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+}
+.description {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 15px;
+}
+.advertise-btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.advertise-btn:hover {
+  background-color: orange;
+}
+
+/* How to Advertise */
+.how-to-advertise {
+  padding: 60px 20px;
+  text-align: center;
+}
+.how-to-advertise h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: orange;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.step {
+  background-color: #fff;
+  width: 250px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.step h3 {
+  margin-bottom: 10px;
+  color: orange;
+  font-size: 25px;
+}
+.step p {
+  font-size: 0.95rem;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  .channel-cards, .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+

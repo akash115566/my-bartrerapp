@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+.tvmore-page,h1 {
+  width: 100%;
+  /* background: #121212; */
+  color: #fff;
+
+}
+
+.tv-channel-section {
+  margin-bottom: 80px;
+}
+
+/* Banner */
+/* Banner height */
+.tv-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;      /* padding thoda bada kiya */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  border-radius: 12px;
+  flex-wrap: wrap;
+  min-height: 400px;
+  max-height: 700px;  /* banner height increase */
+  overflow: hidden;
+}
+.banner-text {
+  flex: 1;
+  min-width: 300px;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+
+   color: white !important;
+  margin-bottom: 15px;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+.banner-video {
+  flex: 1;
+  /* min-width: 300px; */
+  margin-top: 20px;
+  max-height: 200px;
+  /* margin-bottom: 30px; */
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  mix-blend-mode: multiply;
+}
+
+.banner-video video {
+  width: 100%;
+  /* margin-bottom: 20px; */
+  margin-top: 50px;
+
+  max-height: 300px;   /* video ka maximum height */
+  border-radius: 12px;
+  object-fit: cover;   /* video fit properly */
+}
+/* Info Section */
+.tv-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.info-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-left h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.info-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.info-right {
+  flex: 1;
+  min-width: 400px;
+  /* background-color: red; */
+  height: 170px;
+  justify-content: end;
+  display: flex;
+}
+
+.info-right img {
+ height: 100%;
+ width: 50%;
+ text-align: end;
+ justify-content: end;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tv-banner, .tv-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-text, .banner-video, .info-left, .info-right {
+    min-width: 100%;
+  }
+  .banner-text h1, .info-left h2 {
+    font-size: 2rem;
+  }
+}

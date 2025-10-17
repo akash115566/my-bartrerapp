@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* 🔹 Banner */
+.product-banner {
+   display: flex;
+  align-items: center;        /* content vertical middle me */
+  justify-content: space-between;
+  padding: 20px 8%;           /* kam padding rakhi */
+  background: linear-gradient(130deg, orange, rgb(210, 210, 83));
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 220px;   
+   margin-top: 30px;
+}
+
+.banner-left {
+  flex: 1;
+    min-width: 280px;
+  padding-right: 20px;
+}
+
+.banner-left h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.banner-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.banner-left button {
+  padding: 12px 25px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.banner-left button:hover {
+  background: #ff6600;
+}
+
+.banner-right {
+  /* flex: 1; */
+  text-align: center;
+}
+
+.banner-right video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 16px rgba(176, 168, 30, 0.84);
+}
+
+
+/* 🔹 Slider */
+.slider1 {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  height: 220px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Continuous Track */
+.slider1-track {
+  display: flex;
+  align-items: center;
+  width: max-content; /* auto width based on content */
+  animation: scroll 20s linear infinite;
+  gap: 20px;
+   padding-top: 30px;
+}
+
+.slider1-track img {
+  width: 250px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+ 
+  margin-right: 10px; /* right margin only */
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(219, 221, 79, 0.99);
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* track duplicate होने से seamless loop */
+  }
+}
+
+.pro{
+    height: 100px;
+    width: 100%;
+    border: 3px solid black;
+    box-shadow: 0 4px 10px rgba(216, 218, 95, 0.948);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro h1{
+    color: orange;
+    text-align: center;
+}
+
+/* Product Texts */
+.product-texts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.product-text {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-text:hover {
+  transform: translateY(-8px);
+}
+
+.product-video {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-text h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-text p {
+  font-size: 14px;
+  color: #555;
+}
+
+body {
+  background: #1a1a1a;
+}
+
+/* Banner */
+.product-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 8%;
+  flex-wrap: wrap;
+  background: linear-gradient(130deg, orange, #d2d253);
+  color: white;
+}
+
+.banner-left {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 20px;
+}
+
+.banner-left h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.banner-left p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+
+.banner-left button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  color: orange;
+  transition: 0.3s;
+}
+
+.banner-left button:hover {
+  background: orange;
+  color: #fff;
+}
+
+.banner-right img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  mix-blend-mode: multiply;
+}
+
+/* Features Section */
+.features-section {
+  /* padding: 60px 8%; */
+  text-align: center;
+  /* background-color: red; */
+}
+
+.features-section h2 {
+  color: orange;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between; /* space evenly distribute karta hai */
+  flex-wrap: wrap;
+  gap: 10px;   /* pehle 20px tha, kam kar diya */
+  padding: 0 10px; /* container ke left-right space ko kam kare */
+}
+
+.feature-card {
+  flex: 1 1 calc(20% - 10px); /* 3 cards ek row me, gap adjust ho gaya */
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 230px;  /* responsive ke liye minimum width */
+}
+
+.feature-card img {
+  width: 100%;      
+  height: 180px;    
+  object-fit: cover; 
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+
+
+.feature-card h3 {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Gallery Slider */
+.gallery-section1 {
+  padding: 40px 0;
+}
+
+.gallery-section1 h2{
+  color: orange;
+  font-size: 3rem;
+  /* margin-left: 30%; */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-slider1 {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-track1 {
+  display: flex;
+  /* width: calc(250px * 8); */
+  animation: scroll 40s linear infinite;
+  gap: 30px;
+}
+
+.slide1 {
+  width: 250px;
+  max-width: 300px;
+  min-width: 260px;
+  /* flex-shrink: 0; */
+  margin: 0 10px;
+  height: 100%;
+  gap: 20px;
+ 
+}
+
+.slide1 img {
+  /* width: 100%; */
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.campaign-text-container1 {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgb(51, 51, 51);
+}
+
+.header2 h2 {
+  text-align: center;
+  color: orange;
+  margin-bottom: 10px;
+  font-size: 45px;
+}
+
+.header2 p {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.campaign-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid orange;
+}
+
+.campaign-item h3 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.campaign-item p {
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* Steps Section */
+.steps-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.steps-section h2 {
+  color: orange;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step-card {
+  flex: 1 1 200px;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.step-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.step-card h3 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Testimonials */
+/* Section Heading */
+.pro-test2 {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.pro-test2 h2 {
+  font-size: 2rem;
+  color: orange;
+  /* border-left: 5px solid orange; */
+  padding-left: 15px;
+  margin: 0;
+}
+
+/* Testimonials Container */
+.testimonials-section2 {
+  padding: 30px 20px;
+  background-color: #000; /* optional */
+}
+
+.testimonials-container2 {
+  display: flex;
+  flex-wrap: wrap; /* wrap cards on smaller screens */
+  gap: 35px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.testimonial-card2 {
+  flex: 1 1 300px; /* responsive width: min 300px */
+  max-width: 350px;
+  background-color: #333;
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.testimonial-card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Card Image */
+.testimonial-card2 img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Quote Text */
+.testimonial-card2 p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Author */
+.testimonial-card2 h4 {
+  font-size: 16px;
+  color: orange;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .testimonial-card2 {
+    flex: 1 1 45%; /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card2 {
+    flex: 1 1 100%; /* 1 card per row */
+  }
+}

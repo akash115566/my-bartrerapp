@@ -1,0 +1,262 @@
+/* header.css */
+
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navigation container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Menu toggle button (hamburger) */
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: orange;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navigation links */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a,
+.nav span {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: all 0.3s;
+}
+
+.nav a:hover,
+.dropdown-toggle:hover {
+  color: orange;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: orange;
+  color: black;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+/* Tablet: max-width 992px */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .header {
+  width: 100%;
+  min-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    background: black;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 6px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav a,
+  .dropdown-toggle {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* Mobile: max-width 600px */
+@media (max-width: 600px) {
+  .logo {
+    width: 120px;
+  }
+
+  .nav {
+    width: 220px;
+  }
+
+  .nav a,
+  .dropdown-toggle {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+/* Small Mobile: max-width 480px */
+/* @media (max-width: 480px) {
+  .logo {
+    width: 100px; 
+  }
+
+  .nav {
+    width: 200px; 
+    padding: 10px;
+    gap: 8px;
+    
+  }
+
+  .nav a,
+  .dropdown-toggle {
+    font-size: 0.85rem; 
+    padding: 8px 10px;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 10px; 
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 20px;
+  }
+
+  .menu-toggle span {
+    height: 2.5px;
+  }
+} */
+
+@media (max-width: 480px) {
+  .nav {
+    transform: translateX(110%); /* 👈 menu fully hide off-screen */
+    opacity: 0;                  /* 👈 invisible */
+    visibility: hidden;          /* 👈 not clickable */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav.open {
+    transform: translateX(0);    /* 👈 slide in on click */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav a,
+  .dropdown-toggle {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 10px;
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 20px;
+  }
+
+  .menu-toggle span {
+    height: 2.5px;
+  }
+}
